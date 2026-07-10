@@ -16,165 +16,91 @@
       top: 0;
       z-index: 10;
     }
-    .header-content { max-width: 900px; margin: 0 auto; }
-    .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
+    .header-content { max-width: 1000px; margin: 0 auto; }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; margin-bottom: 16px; }
     .title-block h1 { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
     .title-block p { color: #64748B; font-size: 12px; }
     .tc-input { display: flex; align-items: center; gap: 8px; background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 10px; }
     .tc-input span { color: #B45309; font-weight: 700; font-size: 14px; }
     .tc-input input { background: transparent; border: none; outline: none; color: #B45309; font-weight: 700; font-size: 16px; width: 100px; text-align: right; }
 
-    .conversor-section {
-      border-top: 1px solid #E2E8F0;
-      padding-top: 16px;
-      margin-top: 16px;
-    }
+    .conversor-section { border-top: 1px solid #E2E8F0; padding-top: 16px; margin-top: 16px; }
     .conversor-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
     .conversor-header span { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748B; }
     .conversor-header button { background: transparent; border: 1px solid #E2E8F0; color: #64748B; cursor: pointer; font-size: 11px; font-weight: 600; padding: 3px 12px; border-radius: 99px; }
-
-    .conversor-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-    }
-    .currency-card {
-      background: #F1F5F9;
-      border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 12px;
-    }
+    .conversor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+    .currency-card { background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px; }
     .currency-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
     .currency-name { display: flex; gap: 6px; align-items: center; font-weight: 700; font-size: 13px; }
-    .currency-tc-input {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      background: rgba(0,0,0,0.05);
-      border-radius: 6px;
-      padding: 2px 6px;
-    }
+    .currency-tc-input { display: flex; align-items: center; gap: 2px; background: rgba(0,0,0,0.05); border-radius: 6px; padding: 2px 6px; }
     .currency-tc-input span { font-size: 9px; font-weight: 700; color: #94A3B8; }
     .currency-tc-input input { width: 40px; background: transparent; border: none; outline: none; font-size: 9px; font-weight: 700; color: #64748B; text-align: right; }
-    .currency-input {
-      width: 100%;
-      padding: 9px 12px;
-      border: 1px solid #E2E8F0;
-      border-radius: 9px;
-      background: white;
-      font-size: 14px;
-      margin-bottom: 8px;
-      outline: none;
-    }
-    .currency-result {
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.2);
-      border-radius: 9px;
-      padding: 9px 12px;
-      min-height: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    .currency-input { width: 100%; padding: 9px 12px; border: 1px solid #E2E8F0; border-radius: 9px; background: white; font-size: 14px; margin-bottom: 8px; outline: none; }
+    .currency-result { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 9px; padding: 9px 12px; min-height: 50px; display: flex; flex-direction: column; justify-content: center; }
     .currency-result-amount { font-size: 18px; font-weight: 800; }
     .currency-result-desc { font-size: 10px; color: #94A3B8; margin-top: 2px; }
-    .currency-empty {
-      height: 50px;
-      border: 1.5px dashed #E2E8F0;
-      border-radius: 9px;
+    .currency-empty { height: 50px; border: 1.5px dashed #E2E8F0; border-radius: 9px; display: flex; align-items: center; justify-content: center; color: #94A3B8; font-size: 11px; }
+
+    .tabs {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #94A3B8;
-      font-size: 11px;
+      gap: 2px;
+      margin-top: 16px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .tab-button {
+      padding: 9px 18px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: #64748B;
+      border-bottom: 2px solid transparent;
+    }
+    .tab-button.active {
+      color: #0F172A;
+      border-bottom-color: #0EA5E9;
     }
 
-    .content { max-width: 900px; margin: 0 auto; padding: 24px 20px; }
+    .content { max-width: 1000px; margin: 0 auto; padding: 24px 20px; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
     .funds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-
-    .fund-card {
-      background: white;
-      border: 1px solid #E2E8F0;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    }
+    .fund-card { background: white; border: 1px solid #E2E8F0; border-radius: 16px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
     .fund-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
     .fund-title { display: flex; gap: 10px; align-items: center; }
     .fund-emoji { font-size: 24px; line-height: 1; }
     .fund-name { font-weight: 700; font-size: 15px; }
     .fund-amount { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
     .fund-usd { font-size: 12px; color: #64748B; }
-    .progress-bar {
-      height: 8px;
-      border-radius: 99px;
-      background: rgba(0,0,0,0.07);
-      overflow: hidden;
-      margin: 12px 0;
-    }
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #10B981 0%, #10B981 100%);
-      border-radius: 99px;
-      transition: width 0.8s ease;
-    }
-    .fund-progress-text { font-size: 11px; color: #64748B; }
-
-    .deposit-btn {
-      width: 100%;
-      padding: 12px;
-      background: white;
-      border: 1px solid #E2E8F0;
-      border-radius: 9px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 14px;
-      margin-top: 14px;
-    }
+    .deposit-btn { width: 100%; padding: 12px; background: white; border: 1px solid #E2E8F0; border-radius: 9px; cursor: pointer; font-weight: 600; font-size: 14px; margin-top: 14px; }
     .deposit-btn:hover { background: #F8FAFC; }
 
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.45);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 100;
-    }
-    .modal-content {
-      background: white;
-      border-radius: 16px;
-      padding: 24px;
-      max-width: 400px;
-      width: 90%;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.14);
-    }
+    .calculator-card { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    .calculator-title { font-size: 15px; font-weight: 700; margin-bottom: 16px; }
+    .calculator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .input-group { display: flex; flex-direction: column; }
+    .input-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748B; margin-bottom: 6px; }
+    .input-field { padding: 11px 14px; border: 1px solid #E2E8F0; border-radius: 9px; font-size: 15px; outline: none; }
+    .result-box { background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 10px; padding: 14px; margin-top: 12px; }
+    .result-amount { font-size: 24px; font-weight: 800; color: #16A34A; }
+    .result-desc { font-size: 12px; color: #15803D; margin-top: 4px; }
+
+    .modal { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; align-items: center; justify-content: center; z-index: 100; }
+    .modal-content { background: white; border-radius: 16px; padding: 24px; max-width: 400px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.14); }
     .modal-title { font-size: 17px; font-weight: 700; margin-bottom: 20px; }
     .modal-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748B; margin: 14px 0 6px; }
-    .modal-input {
-      width: 100%;
-      padding: 11px 14px;
-      border: 1px solid #E2E8F0;
-      border-radius: 9px;
-      font-size: 15px;
-      outline: none;
-      margin-bottom: 6px;
-    }
-    .modal-button {
-      width: 100%;
-      padding: 13px;
-      background: #10B981;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 15px;
-      cursor: pointer;
-      margin-top: 14px;
-    }
+    .modal-input { width: 100%; padding: 11px 14px; border: 1px solid #E2E8F0; border-radius: 9px; font-size: 15px; outline: none; margin-bottom: 6px; }
+    .modal-button { width: 100%; padding: 13px; background: #10B981; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 15px; cursor: pointer; margin-top: 14px; }
 
     .hidden { display: none !important; }
+    .progress-bar { height: 8px; border-radius: 99px; background: rgba(0,0,0,0.07); overflow: hidden; margin: 12px 0; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #10B981, #4ADE80); border-radius: 99px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 12px; }
+    table th { text-align: left; padding: 8px; border-bottom: 1px solid #E2E8F0; font-weight: 700; color: #64748B; }
+    table td { padding: 8px; border-bottom: 1px solid #E2E8F0; }
+    table tr:nth-child(even) { background: #F8FAFC; }
   </style>
 </head>
 <body>
@@ -199,13 +125,229 @@
         </div>
         <div class="conversor-grid" id="conversor-grid"></div>
       </div>
+
+      <div class="tabs">
+        <button class="tab-button active" onclick="switchTab('fondos')">Fondos</button>
+        <button class="tab-button" onclick="switchTab('simulador')">Simulador</button>
+        <button class="tab-button" onclick="switchTab('calculadoras')">Calculadoras</button>
+      </div>
     </div>
   </div>
 
   <div class="content">
-    <div class="funds-grid" id="funds-grid"></div>
+    <!-- ════════════════════ FONDOS ════════════════════ -->
+    <div id="fondos" class="tab-content active">
+      <div class="funds-grid" id="funds-grid"></div>
+    </div>
+
+    <!-- ════════════════════ SIMULADOR ════════════════════ -->
+    <div id="simulador" class="tab-content">
+      <div class="calculator-card">
+        <div class="calculator-title">🧮 Simulador de ahorro</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Capital inicial ($)</label>
+            <input type="text" class="input-field" id="sim-capital" value="0" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Ahorro mensual ($)</label>
+            <input type="text" class="input-field" id="sim-ahorro" value="600000" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Tasa (%/mes)</label>
+            <input type="number" class="input-field" id="sim-tasa" value="5" step="0.1" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Plazo (meses)</label>
+            <input type="number" class="input-field" id="sim-meses" value="24" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularSimulador()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="simulador-resultados"></div>
+      </div>
+    </div>
+
+    <!-- ════════════════════ CALCULADORAS ════════════════════ -->
+    <div id="calculadoras" class="tab-content">
+      <!-- Porcentaje -->
+      <div class="calculator-card">
+        <div class="calculator-title">🔢 Porcentaje de un número</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Número</label>
+            <input type="text" class="input-field" id="pct-numero" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Porcentaje (%)</label>
+            <input type="text" class="input-field" id="pct-valor" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularPorcentaje()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="pct-resultado"></div>
+      </div>
+
+      <!-- Días -->
+      <div class="calculator-card">
+        <div class="calculator-title">📅 Días hasta una fecha</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Fecha</label>
+            <input type="date" class="input-field" id="dias-fecha" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularDias()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="dias-resultado"></div>
+      </div>
+
+      <!-- Conversor USD <-> ARS -->
+      <div class="calculator-card">
+        <div class="calculator-title">💱 Conversor $ ↔ USD</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Cantidad</label>
+            <input type="text" class="input-field" id="conv-cantidad" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">De</label>
+            <select class="input-field" id="conv-de">
+              <option value="pesos">Pesos</option>
+              <option value="usd">USD</option>
+            </select>
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularConversor()" style="background: #0EA5E9; margin-top: 0;">Convertir</button>
+        <div id="conv-resultado"></div>
+      </div>
+
+      <!-- Inflación -->
+      <div class="calculator-card">
+        <div class="calculator-title">📉 Calculadora de inflación</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Valor hoy ($)</label>
+            <input type="text" class="input-field" id="inf-valor" value="1000000" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Inflación (%/mes)</label>
+            <input type="number" class="input-field" id="inf-tasa" value="4" step="0.1" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Plazo (meses)</label>
+            <input type="number" class="input-field" id="inf-meses" value="12" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularInflacion()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="inf-resultado"></div>
+      </div>
+
+      <!-- Tipo de cambio -->
+      <div class="calculator-card">
+        <div class="calculator-title">💵 Simulador de tipo de cambio</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">TC actual ($/USD)</label>
+            <input type="number" class="input-field" id="tc-actual" value="1420" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Suba mensual (%)</label>
+            <input type="number" class="input-field" id="tc-suba" value="2" step="0.1" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Plazo (meses)</label>
+            <input type="number" class="input-field" id="tc-meses" value="12" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularTC()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="tc-resultado"></div>
+      </div>
+
+      <!-- Cuotas -->
+      <div class="calculator-card">
+        <div class="calculator-title">🏦 Calculadora de cuotas</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Capital ($)</label>
+            <input type="text" class="input-field" id="cuota-capital" value="1000000" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Tasa (%/mes)</label>
+            <input type="number" class="input-field" id="cuota-tasa" value="5" step="0.1" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Nro de cuotas</label>
+            <input type="number" class="input-field" id="cuota-numero" value="12" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularCuotas()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="cuota-resultado"></div>
+      </div>
+
+      <!-- Interés compuesto -->
+      <div class="calculator-card">
+        <div class="calculator-title">📈 Interés compuesto</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Capital ($)</label>
+            <input type="text" class="input-field" id="intcomp-capital" value="1000000" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Tasa (%/mes)</label>
+            <input type="number" class="input-field" id="intcomp-tasa" value="5" step="0.1" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Plazo (meses)</label>
+            <input type="number" class="input-field" id="intcomp-meses" value="24" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularInteresCompuesto()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="intcomp-resultado"></div>
+      </div>
+
+      <!-- Rendimiento real -->
+      <div class="calculator-card">
+        <div class="calculator-title">🔬 Rendimiento real vs inflación</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Rendimiento nominal (%/mes)</label>
+            <input type="number" class="input-field" id="real-nominal" value="5" step="0.1" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Inflación (%/mes)</label>
+            <input type="number" class="input-field" id="real-inflacion" value="4" step="0.1" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularRendimientoReal()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="real-resultado"></div>
+      </div>
+
+      <!-- ¿Cuándo llego a mi meta? -->
+      <div class="calculator-card">
+        <div class="calculator-title">🎯 ¿Cuándo llego a mi meta?</div>
+        <div class="calculator-grid">
+          <div class="input-group">
+            <label class="input-label">Tengo actualmente ($)</label>
+            <input type="text" class="input-field" id="meta-tengo" value="0" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Ahorro por mes ($)</label>
+            <input type="text" class="input-field" id="meta-ahorro" value="600000" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Tasa (%/mes)</label>
+            <input type="number" class="input-field" id="meta-tasa" value="5" step="0.1" />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Meta ($)</label>
+            <input type="text" class="input-field" id="meta-meta" value="10000000" />
+          </div>
+        </div>
+        <button class="modal-button" onclick="calcularCuandoMeta()" style="background: #0EA5E9; margin-top: 0;">Calcular</button>
+        <div id="meta-resultado"></div>
+      </div>
+    </div>
   </div>
 
+  <!-- MODAL DEPOSITAR -->
   <div class="modal hidden" id="modal">
     <div class="modal-content">
       <h2 class="modal-title" id="modal-title"></h2>
@@ -217,15 +359,8 @@
 
   <script>
     // ════════════════════════════════════════════════════════════════
-    //  CONFIG
+    //  CONFIGURACIÓN
     // ════════════════════════════════════════════════════════════════
-    const COLORS = {
-      USD: "#10B981",
-      EUR: "#0EA5E9",
-      BRL: "#F59E0B",
-      PYG: "#8B5CF6"
-    };
-
     const CURRENCIES = [
       { key: "USD", flag: "🇺🇸", name: "Dólar", sym: "USD", default: 1420 },
       { key: "EUR", flag: "🇪🇺", name: "Euro", sym: "EUR", default: 1560 },
@@ -241,17 +376,16 @@
     ];
 
     // ════════════════════════════════════════════════════════════════
-    //  STATE
+    //  ESTADO
     // ════════════════════════════════════════════════════════════════
     let funds = [];
     let rates = {};
     let conversorOpen = true;
+    let currentTab = "fondos";
 
-    // Load from localStorage
     function loadData() {
       const saved = localStorage.getItem("cami_funds");
       funds = saved ? JSON.parse(saved) : DEFAULT_FUNDS;
-
       CURRENCIES.forEach(c => {
         const tc = localStorage.getItem(`tc_${c.key}`);
         rates[c.key] = tc ? parseFloat(tc) : c.default;
@@ -286,15 +420,12 @@
           <div class="fund-header">
             <div class="fund-title">
               <span class="fund-emoji">${f.emoji}</span>
-              <div>
-                <div class="fund-name">${f.name}</div>
-              </div>
+              <div class="fund-name">${f.name}</div>
             </div>
           </div>
           <div class="fund-amount">${"$" + Math.round(f.amount).toLocaleString("es-AR")}</div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 50%"></div>
-          </div>
+          <div class="fund-usd">≈ USD ${Math.round(f.amount / rates.USD).toLocaleString("es-AR")}</div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 50%"></div></div>
           <button class="deposit-btn" onclick="openModal(${f.id}, '${f.name}', '${f.emoji}')">+ Depositar</button>
         </div>
       `).join("");
@@ -307,32 +438,15 @@
         return `
           <div class="currency-card">
             <div class="currency-header">
-              <div class="currency-name">
-                <span>${c.flag}</span>
-                <span>${c.name}</span>
-              </div>
+              <div class="currency-name"><span>${c.flag}</span><span>${c.name}</span></div>
               <div class="currency-tc-input">
                 <span>$</span>
-                <input
-                  type="number"
-                  id="tc-${c.key}"
-                  value="${tc}"
-                  onchange="updateTC('${c.key}')"
-                  step="${c.key === 'PYG' ? '0.01' : '1'}"
-                />
+                <input type="number" id="tc-${c.key}" value="${tc}" onchange="updateTC('${c.key}')" step="${c.key === 'PYG' ? '0.01' : '1'}" />
                 <span>/${c.sym}</span>
               </div>
             </div>
-            <input
-              type="text"
-              class="currency-input"
-              placeholder="Importe..."
-              oninput="updateConversor('${c.key}')"
-              id="input-${c.key}"
-            />
-            <div class="currency-result" id="result-${c.key}">
-              <div class="currency-empty">Ingresá un importe</div>
-            </div>
+            <input type="text" class="currency-input" placeholder="Importe..." oninput="updateConversor('${c.key}')" id="input-${c.key}" />
+            <div class="currency-result" id="result-${c.key}"><div class="currency-empty">Ingresá un importe</div></div>
           </div>
         `;
       }).join("");
@@ -350,7 +464,6 @@
       const input = document.getElementById(`input-${key}`);
       const result = document.getElementById(`result-${key}`);
       const amount = parseFloat(input.value.replace(/\./g, "").replace(",", ".")) || 0;
-
       if (amount > 0) {
         const pesos = amount * rates[key];
         result.innerHTML = `
@@ -363,10 +476,20 @@
     }
 
     // ════════════════════════════════════════════════════════════════
+    //  TABS
+    // ════════════════════════════════════════════════════════════════
+    function switchTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+      document.querySelectorAll(".tab-button").forEach(el => el.classList.remove("active"));
+      document.getElementById(tab).classList.add("active");
+      event.target.classList.add("active");
+    }
+
+    // ════════════════════════════════════════════════════════════════
     //  MODAL
     // ════════════════════════════════════════════════════════════════
     let currentFundId = null;
-
     function openModal(fundId, name, emoji) {
       currentFundId = fundId;
       document.getElementById("modal-title").textContent = `${emoji} ${name}`;
@@ -374,11 +497,9 @@
       document.getElementById("modal").classList.remove("hidden");
       document.getElementById("modal-amount").focus();
     }
-
     function closeModal() {
       document.getElementById("modal").classList.add("hidden");
     }
-
     function saveDeposit() {
       const amount = parseFloat(document.getElementById("modal-amount").value.replace(/\./g, "").replace(",", ".")) || 0;
       if (amount > 0) {
@@ -393,7 +514,121 @@
     }
 
     // ════════════════════════════════════════════════════════════════
-    //  EVENT LISTENERS
+    //  CALCULADORAS
+    // ════════════════════════════════════════════════════════════════
+    function fmt$(n) { return "$" + Math.round(n).toLocaleString("es-AR"); }
+    function fmtUSD(n) { return "USD " + Math.round(n).toLocaleString("es-AR"); }
+    function parseAmt(s) { return parseFloat(String(s).replace(/\./g, "").replace(",", ".")) || 0; }
+    function calcFV(c, a, t, m) { if (m<=0) return c; if (t<=0) return c+a*m; const r=t/100, f=Math.pow(1+r,m); return c*f+a*(f-1)/r; }
+    function calcCuota(c,t,n) { if (n<=0) return 0; if (t<=0) return c/n; const r=t/100; return c*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1); }
+
+    function calcularPorcentaje() {
+      const num = parseAmt(document.getElementById("pct-numero").value);
+      const pct = parseFloat(document.getElementById("pct-valor").value) || 0;
+      const res = num * pct / 100;
+      document.getElementById("pct-resultado").innerHTML = `<div class="result-box"><div class="result-amount">${fmt$(res)}</div><div class="result-desc">${pct.toFixed(1)}% de ${fmt$(num)} = ${fmt$(res)}</div></div>`;
+    }
+
+    function calcularDias() {
+      const fecha = document.getElementById("dias-fecha").value;
+      if (!fecha) return;
+      const hoy = new Date(); hoy.setHours(0,0,0,0);
+      const dest = new Date(fecha + "T00:00:00");
+      const dias = Math.round((dest - hoy) / 86400000);
+      document.getElementById("dias-resultado").innerHTML = `<div class="result-box"><div class="result-amount">${dias} días</div><div class="result-desc">${(dias/7).toFixed(1)} semanas · ${(dias/30.44).toFixed(1)} meses</div></div>`;
+    }
+
+    function calcularConversor() {
+      const cant = parseAmt(document.getElementById("conv-cantidad").value);
+      const de = document.getElementById("conv-de").value;
+      const res = de === "pesos" ? cant / rates.USD : cant * rates.USD;
+      const label = de === "pesos" ? fmtUSD(res) : fmt$(res);
+      document.getElementById("conv-resultado").innerHTML = `<div class="result-box"><div class="result-amount">${label}</div></div>`;
+    }
+
+    function calcularInflacion() {
+      const valor = parseAmt(document.getElementById("inf-valor").value);
+      const tasa = parseFloat(document.getElementById("inf-tasa").value) || 0;
+      const meses = parseInt(document.getElementById("inf-meses").value) || 1;
+      const futuro = valor * Math.pow(1 + tasa/100, meses);
+      const perdida = (futuro - valor) / valor * 100;
+      document.getElementById("inf-resultado").innerHTML = `<div class="result-box"><div class="result-amount" style="color: #E11D48;">${fmt$(futuro)}</div><div class="result-desc" style="color: #9F1239;">Pérdida de poder adquisitivo: ${perdida.toFixed(1)}%</div></div>`;
+    }
+
+    function calcularTC() {
+      const tc = parseFloat(document.getElementById("tc-actual").value) || 1420;
+      const suba = parseFloat(document.getElementById("tc-suba").value) || 0;
+      const meses = parseInt(document.getElementById("tc-meses").value) || 1;
+      const tcFut = tc * Math.pow(1 + suba/100, meses);
+      document.getElementById("tc-resultado").innerHTML = `<div class="result-box"><div class="result-amount" style="color: #B45309;">$${Math.round(tcFut).toLocaleString("es-AR")}/USD</div><div class="result-desc" style="color: #92400E;">Sube ${((tcFut/tc-1)*100).toFixed(1)}% en total</div></div>`;
+    }
+
+    function calcularCuotas() {
+      const cap = parseAmt(document.getElementById("cuota-capital").value);
+      const tasa = parseFloat(document.getElementById("cuota-tasa").value) || 0;
+      const cuotas = parseInt(document.getElementById("cuota-numero").value) || 1;
+      const cuota = calcCuota(cap, tasa, cuotas);
+      const total = cuota * cuotas;
+      const intereses = total - cap;
+      document.getElementById("cuota-resultado").innerHTML = `<div class="result-box"><div class="result-amount">${fmt$(cuota)}</div><div class="result-desc">Cuota mensual · Total: ${fmt$(total)} · Intereses: ${fmt$(intereses)}</div></div>`;
+    }
+
+    function calcularInteresCompuesto() {
+      const cap = parseAmt(document.getElementById("intcomp-capital").value);
+      const tasa = parseFloat(document.getElementById("intcomp-tasa").value) || 0;
+      const meses = parseInt(document.getElementById("intcomp-meses").value) || 1;
+      const fin = calcFV(cap, 0, tasa, meses);
+      const int = fin - cap;
+      document.getElementById("intcomp-resultado").innerHTML = `<div class="result-box"><div class="result-amount" style="color: #16A34A;">${fmt$(fin)}</div><div class="result-desc" style="color: #15803D;">Capital: ${fmt$(cap)} · Ganado: ${fmt$(int)} (${(int/cap*100).toFixed(1)}%)</div></div>`;
+    }
+
+    function calcularRendimientoReal() {
+      const nom = parseFloat(document.getElementById("real-nominal").value) || 0;
+      const inf = parseFloat(document.getElementById("real-inflacion").value) || 0;
+      const real = ((1 + nom/100) / (1 + inf/100) - 1) * 100;
+      const pos = real >= 0;
+      document.getElementById("real-resultado").innerHTML = `<div class="result-box" style="${pos ? 'background: #F0FDF4; border-color: #BBF7D0;' : 'background: #FFF1F2; border-color: #FECDD3;'}"><div class="result-amount" style="color: ${pos ? '#16A34A' : '#E11D48'};">${pos ? '+' : ''}${real.toFixed(2)}%/mes</div></div>`;
+    }
+
+    function calcularSimulador() {
+      const cap = parseAmt(document.getElementById("sim-capital").value);
+      const aho = parseAmt(document.getElementById("sim-ahorro").value);
+      const tasa = parseFloat(document.getElementById("sim-tasa").value) || 0;
+      const meses = parseInt(document.getElementById("sim-meses").value) || 1;
+      const scenarios = [
+        { label: "Conservador", delta: -1.5, color: "#64748B" },
+        { label: "Base", delta: 0, color: "#16A34A" },
+        { label: "Optimista", delta: 1.5, color: "#D97706" }
+      ];
+      let html = "";
+      scenarios.forEach(s => {
+        const t = Math.max(0.01, tasa + s.delta);
+        const fin = calcFV(cap, aho, t, meses);
+        html += `<div class="result-box" style="background: ${s.color}15; border-color: ${s.color}40; margin-top: 12px;"><div style="color: ${s.color}; font-weight: 700; margin-bottom: 4px;">${s.label} (${t.toFixed(1)}%)</div><div class="result-amount" style="color: ${s.color};">${fmt$(fin)}</div></div>`;
+      });
+      document.getElementById("simulador-resultados").innerHTML = html;
+    }
+
+    function calcularCuandoMeta() {
+      const tengo = parseAmt(document.getElementById("meta-tengo").value);
+      const ahorro = parseAmt(document.getElementById("meta-ahorro").value);
+      const tasa = parseFloat(document.getElementById("meta-tasa").value) || 0;
+      const meta = parseAmt(document.getElementById("meta-meta").value);
+      if (tengo >= meta) {
+        document.getElementById("meta-resultado").innerHTML = `<div class="result-box"><div class="result-amount" style="color: #16A34A;">🎉 ¡Ya llegaste!</div></div>`;
+        return;
+      }
+      let cur = tengo, m = 0;
+      const r = tasa / 100;
+      while (cur < meta && m < 1200) { cur = cur * (1 + r) + ahorro; m++; }
+      if (m < 1200) {
+        const fechaMeta = new Date(); fechaMeta.setMonth(fechaMeta.getMonth() + m);
+        document.getElementById("meta-resultado").innerHTML = `<div class="result-box"><div class="result-amount">${m} meses</div><div class="result-desc">${fechaMeta.toLocaleString("es-AR", {month:"long", year:"numeric"})} · ${(m/12).toFixed(1)} años</div></div>`;
+      }
+    }
+
+    // ════════════════════════════════════════════════════════════════
+    //  INIT
     // ════════════════════════════════════════════════════════════════
     document.addEventListener("DOMContentLoaded", () => {
       loadData();
@@ -418,13 +653,8 @@
       });
 
       document.getElementById("modal-save").addEventListener("click", saveDeposit);
-      document.getElementById("modal-amount").addEventListener("keypress", (e) => {
-        if (e.key === "Enter") saveDeposit();
-      });
-
-      document.getElementById("modal").addEventListener("click", (e) => {
-        if (e.target === document.getElementById("modal")) closeModal();
-      });
+      document.getElementById("modal-amount").addEventListener("keypress", (e) => { if (e.key === "Enter") saveDeposit(); });
+      document.getElementById("modal").addEventListener("click", (e) => { if (e.target === document.getElementById("modal")) closeModal(); });
     });
   </script>
 
